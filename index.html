@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" ng-app="resumeApp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="" >
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>kamdjou | resume</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+	<![endif]-->
+	<style type="text/css">
+	.reveal-animation.ng-enter {
+	  -webkit-animation: enter_sequence 1s linear; /* Safari/Chrome */
+	  animation: enter_sequence 1s linear; /* IE10+ and Future Browsers */
+	}
+	@-webkit-keyframes enter_sequence {
+	  from { opacity:0; }
+	  to { opacity:1; }
+	}
+	@keyframes enter_sequence {
+	  from { opacity:0; }
+	  to { opacity:1; }
+	}
+	</style>
+
+</head>
+
+<body ng-controller="appCtrl">
+
+<div class="row scroll">
+<div class="col-sm-4 col-md-3 sidebar">
+	<img src="img/avatar.jpg" class="img-reponsive img-circle shawdo">
+	<br />
+
+	<br />
+	<ul class="nav nav-sidebar">
+		<li>
+			<a href="#/" >
+				<span class="fa fa-user"> </span>
+				Personal Informations
+			</a>
+		</li>
+		<li>
+			<a href="#/education-backgrounds">
+				<span class="fa fa-book"> </span>
+				Education Background
+			</a>
+		</li>
+		<li>
+			<a href="#/technical-skills">
+				<span class="fa fa-certificate"> </span>
+				Technical Skills
+			</a>
+		</li>
+		<li>
+			<a href="#/professional-experiences">
+				<span class="glyphicon glyphicon-stats"> </span>
+				Professional Experiences
+			</a>
+		</li>
+		<li>
+			<a href="#/career-objectives">
+				<span class="fa fa-plane"> </span>
+				Career Objectives
+			</a>
+		</li>
+		<li>
+			<a href="#/personal-quality">
+				<span class="glyphicon glyphicon-ok"> </span>
+				Personal Qualities
+			</a>
+		</li>
+	</ul>
+</div>
+
+<div class="col-sm-8 col-md-9">
+	<div class="dateformating row">
+		<p class="pull-left">personal online resume</p>
+		<p class="pull-right ">last update: {{ updateday | date }}</p>
+	</div>
+	<div class="pagecontent row">
+		<ng-view class="reveal-animation"></ng-view>
+	</div>
+
+</div>
+		
+
+</div><!-- end or the global row -->
+
+
+<footer id="ccr-footer">
+	<div class="container">
+	 	<div class="copyright">
+	 		&copy; 2015, JS_man. All Rights Reserved
+	 	</div> <!-- /.copyright -->
+
+	 	<div class="footer-social-icons">
+	 		<ul>
+	 			<li>
+	 				<a href="https://www.google.com/+tonyprojs-man"  class="google-plus"><i class="fa fa-google-plus"></i></a>
+	 			</li>
+	 			<li >
+	 				<a href="https://www.facebook.com/pitchitchi14?viewas=100000686899395&privacy_source=timeline_gear_menu" class="facebook"><i class="fa fa-facebook"></i></a>
+	 			</li>
+	 			<li >
+	 				<a href="https://twitter.com/Tony14Pro" class="twitter"><i class="fa fa-twitter"></i></a>
+	 			</li>
+	 			<li >
+	 				<a href="https://www.linkedin.com/pub/kamdjou-temfack/b4/120/885" class="linkedin"><i class="fa fa-linkedin"></i></a>
+	 			</li>
+	 		</ul>
+	 		
+	 	</div><!--  /.cocial-icons -->
+
+	</div> <!-- /.container -->
+</footer>  <!-- /#ccr-footer -->
+
+
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/angular.js"></script>
+	<script src="js/angular-route.js"></script>
+	<script src="js/angular-animate.js"></script>
+	<script src="js/app.js" ></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "firebase": "kamdjou-resume",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
